@@ -1,0 +1,146 @@
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-200%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.fade-in-on-scroll {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in-on-scroll.active {
+    opacity: 1;
+}
+
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.fade-in {
+    animation: fadeIn 5s ease-out;
+}
+
+.slide-in-left {
+    animation: slideInLeft 2s ease forwards;
+    /* Adjust the duration and easing as needed */
+    visibility: visible;}
+/* Custom styles for the about section */
+.about-section {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+ 
+  color:   #ff0000 ; /* Change the color as needed */
+}
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Set width to full viewport width */
+    height: 100vh; /* Set height to full viewport height */
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Style the video element */
+video {
+    width: 100%; /* Ensure the video fills the container width */
+    height: 100%; /* Ensure the video fills the container height */
+    object-fit: cover; /* Ensure the video covers the entire container */
+}
+/* Add additional styles as needed */
+.content {
+    position: relative;
+    z-index: 1; /* Ensure content is above the video */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+#about {
+    /* background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url("wallpaper.jpg") fixed  center; */
+    background-size: cover; /* Ensure the image covers the entire element */
+    background-position: center; /* Center the background image */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    margin-top: auto;
+    justify-content: center;    
+    align-items: center;
+}
+.card {
+    padding-top: 10%;
+    width: 50%;
+    max-width: 50%;
+    margin: auto; /* Push the card to the right side */
+    background-color:black;
+    
+}
+
+/* Add a media query for screens with a maximum width of 570px */
+@media screen and (max-width: 570px) {
+    .card {
+        padding-top: 20%;
+        width: 100%;
+        font-size: 10%;
+}
+}
+
+/* Custom styles for the card title */
+.card-title {
+    font-size: 300%;
+    font-weight: bold;
+    color: #1e00ff; /* Change the color as needed */
+    margin-bottom: 10px; /* Adjust the margin as needed */
+}
+.card-text {
+    animation: slideInUp 1s ease-out;
+    font-size: 100%;
+    color: #ffffffa1; /* Change the color as needed */
+    margin-bottom: 10px; /* Adjust the margin as needed */
+    
+}
+
+/* Position the social links at the bottom right */
+.social-links {
+    position: absolute;
+    bottom: 4rem; /* Adjust the distance from the bottom */
+    right: 4rem; /* Adjust the distance from the right */
+}
+
+/* Style for social icons */
+.social-icon {
+    width: 40px; /* Adjust the width as needed */
+    max-width: 40px;
+    max-height: 40px;
+    height: 40px; /* Adjust the height as needed */
+    margin-left: 0.5rem; /* Adjust the margin between icons */
+}
+@media screen and (max-width: 570px) {
+    .social-links {
+        right: 1.5rem;
+        bottom: 5.5rem;
+transform: scale(0.5);
+}}
